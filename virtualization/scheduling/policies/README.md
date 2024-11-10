@@ -1,6 +1,17 @@
-# Mutli Level Feedback Queue (MLFQ)
+# Policies
+
+<b> Policies are the algorithms that give the OS behavior and make decisions. These are the scheduling algorithms for now. </b>
+
+Two key algorithms are included in this design
+
+1. Mutli Level Feedback Queue (MLFQ)
+1. Lottery Schedulings
+
+Policy design structure
 
 A design written in Golang
+
+### Mutli Level Feedback Queue (MLFQ)
 
 <b> Parameters </b>
 
@@ -8,10 +19,7 @@ A design written in Golang
 1. Allotment - Time given before priority is re-assesed
 1. Queue Count - Number of queues used
 
-TODO
-still need to define our proceses for a scheduler system
-
-### Rules
+#### Rules
 
 **Rule 1:** If Priority(A) > Priority(B), A runs (B doesn’t).
 
@@ -23,20 +31,10 @@ still need to define our proceses for a scheduler system
 
 **Rule 5:** After some time period S, move all the jobs in the system to the topmost queue.
 
-### Q's to clarify
+#### Q's to clarify
 
 1. How does execution begin... Does the head of each queue get a core? Does queue B only run while there are no jobs in queue A?
 
-## Elements
+### Lottery Scheduling
 
-### Scheduler
-
-- runs processes
-- Maintains processes states (allotment)
-- moves processes based on priority
-
-### Polices -- scheduling algorithms?
-
-### Queues + Execution
-
-### Priority Boost
+#### Rules
